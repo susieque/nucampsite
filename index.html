@@ -9,59 +9,103 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
 
+    <!-- Additional CSS must be placed after Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
+    <link rel="stylesheet" href="css/styles.css" />
+
     <title>NuCamp: A Better Way To Camp</title>
 </head>
 
 <body>
 
-    <header>
-        <div>
-            <h1>NuCamp</h1>
-            <h2>a better way to camp</h2>
+    <header class="jumbotron jumbotron-fluid">~
+        <div class="container">
+            <div class="row">
+                <div class="col">
+    <!-- All view ports in the div classes above are on auto layout(its like saying col-XS-12)-->
+                    <h1>NuCamp</h1>
+                    <h2>a better way to camp</h2>
+                    <!--Close to col and row divs after the closing h2 tag -->
+                </div>
+            </div>
         </div>
     </header>
 
-    <div>
-        <h2>Discover & Review</h2>
-        <h3>Our Campsites</h3>
-        <p>Explore our growing database of curated campsites and leave your own reviews!</p>
-    </div>
+    <!--sticky-top keeps navbar in place-->
+    <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
+        <!--Below make a responsive navbar. Added just below nav tag. Also add a new div with 2 classes- collapse navbar-collapse above ul and id that matches data target above. -->
+        <div class="container">
+            <!--above add container div around the contents of the nav elements. It changes padding on text menu-->
+            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#nucampNavbar">
+            <!--Push toggler to right by adding ml-auto. To above button. A spacing utility class -->  
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="nucampNavbar">
+                <ul class="navbar-nav">
+                    <!--nav-item active is for the home page-->
+                    <li class="nav-item active"><a class ="nav-link" href="#"><i class="fa fa-home fa-lg"></i>Home</a></li>
+                    <li class="nav-item"><a class ="nav-link" href="aboutus.html"><i class="fa fa-info fa-lg"></i>About</a></li>
+                    <il class="nav-item"><a class ="nav-link" href="#"><i class="fa fa-list fa-lg"></i>Sites</a></il>
+                    <li class="nav-item"><a class ="nav-link" href="contactus.html"><i class="fa fa-address-card fa-lg"></i>Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row row-content align-items-center">
+            <div class="col-sm-4 order-sm-last col-md-3">
+                <h2 class="text-sm-right">Discover & Review</h2>
+            </div>
+            <div class="col">
+                <h3>Our Campsites</h3>
+                <p class="d-none d-sm-block">Explore our growing database of curated campsites and leave your own reviews!</p>
+            </div>
+        </div>
 
-    <div>
-        <h2>Featured Campsites</h2>
-        <h3>React Lake Campground</h3>
-        <p>Nestled in the foothills of the Chrome Mountains, this campground on the shores of the pristine React Lake is a favorite for fly fishers.</p>
-    </div>
+        <div class="row row-content align-items-center">
+            <div class="col-sm-4 col-md-3">  
+                <h2>Featured Campsites</h2>
+            </div> 
+            <div class="col">
+                <h3>React Lake Campground</h3>
+                <p class="d-none d-sm-block">Nestled in the foothills of the Chrome Mountains, this campground on the shores of the pristine React Lake is a favorite for fly fishers.</p>
+            </div>
+        </div>
 
-    <div>
-        <h2>Our Community Partners</h2>
-        <h3>Bootstrap Outfitters</h3>
-        <p>Bootstrap Outfitters supplies you with gear you need at prices you can't beat.</p>
+        <div class="row row-content align-items-center">
+            <div class="col-sm-4 order-sm-last col-md-3">
+                <h2 class="text-sm-right">Our Community Partners</h2>
+            </div>
+            <div class="col">
+                <h3>Bootstrap Outfitters</h3>
+                <p class="d-none d-sm-block">Bootstrap Outfitters supplies you with gear you need at prices you can't beat.</p>
+            </div>
+        </div>
     </div>
 
     <footer>
-        <div>
-            <h5>Links</h5>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Sites</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </div>
-        <div>
-            <h5>Social</h5>
-            <a href="http://instagram.com/">Instagram</a>
-            <a href="http://facebook.com/">Facebook</a>
-            <a href="http://twitter.com/">Twitter</a>
-            <a href="http://youtube.com/">YouTube</a>
-        </div>
-        <div>
-            Tel: 1-206-555-1234<br />
-            Email: campsites@nucamp.co
+        <div class="container">
+            <div class="row">
+                <div class="col-4 col-sm-2 offset-1">
+                <h5>Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="aboutus.html">About</a></li>
+                    <li><a href="#">Sites</a></li>
+                    <li><a href="contactus.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-sm-5 text-center">
+                <h5>Social</h5>
+                <a class="btn btn-social-icon btn-instagram" href="http://instagram.com/"><i class="fa fa-instagram"></i></a>
+                <a class="btn btn-social-icon btn-facebook" href="http://facebook.com/"><i class="fa fa-facebook"></i></a>
+                <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
+                <a class="btn btn-social-icon btn-google" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
         </div>
     </footer>
-    
+
      <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
      <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
      <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>

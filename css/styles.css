@@ -1,0 +1,38 @@
+body{
+    font-family: "Open Sans", sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: "Lobster", cursive;
+}
+
+h2 {
+    color: #3046C5
+}
+
+header h2 {
+    color: #CEC8FF;
+}
+
+footer {
+    background-image: linear-gradient(#a69eeb, white);
+    padding: 20px 0;
+}
+
+.jumbotron {
+    margin: 0;
+    padding: 30px;
+    background-image: linear-gradient(to right, #745de9, #3046C5, #601068);
+    color: white;
+}
+
+.row-content {
+    padding: 50px 0;
+    border-bottome: 1px ridge;
+    min-height: 200px;
+}
+
+.navbar {
+    background-color: #901CAD;
+}
+
