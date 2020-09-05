@@ -25,13 +25,19 @@
             <div class="row">
                 <!--Below it spans across 4 columns for xs viewports, 3 for sm, 2 for md, & align-self-center  -->
                 <div class="col-4 col-sm-3 col-md-2 align-self-center">
-                    <img src="img/logo.png" class="img-fluid" />
+                    <a href="#"><img src="img/logo.png" class="img-fluid"></a>
                 </div>
                 <div class="col">
                     <!-- All view ports in the div classes above are on auto layout(its like saying col-XS-12)-->
                     <h1>NuCamp</h1>
+                    
                     <h2>a better way to camp</h2>
+                </div>
                     <!--Close to col and row divs after the closing h2 tag -->
+                <div class="col-md-4 col-xl-2">
+                    <a href="#reserveForm"><button class="btn bg-info text-white btn-lg mt-4">Reserve Campsite</button></a>
+
+                </div>   
                 </div>
             </div>
         </div>
@@ -112,34 +118,34 @@
             <div class="card">
                 <h3 class="card-header bg-info text-white">Reserve a Campsite</h3>
                 <div class="card-body">
-                    <form>
-                        <div class="row">
+                    <form id="reserveForm">
+                        <div class="form-group row">
+                            <label for="numCampers" class="col-sm-6 col-form-label">Number of Campers</label>
                             <div class="col-sm-6">
-                                <label>Number of Campers</label>
-                            </div>
-                            <div class="col-sm-6">
-                                <select name="numCampers" id="numCampers">
-                                    <option>Select</option>
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
-                                    <option>6</option>
+                                <select class="form-control" name="numCampers" id="numCampers">
+                                    <option selected>Select...</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
                                 </select>
                             </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="date" class="col-sm-6 col-form-label">Date</label>
                             <div class="col-sm-6">
-                                <label>Date</label>
+                                <input type="date" id="date" name="date" placeholder="mm/dd/yyyy" class="form-control">
                             </div>
-                            <div class="col-sm-6">
-                                <input type="date" id="date" name="date" placeholder="Date">
-                                <div class="col">
-                                    <button type="submit" class="btn btn-primary">Search</button>
-                                </div>
-                            </div>
-                        </div>   
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <button type="button" type="submit" class="btn btn-primary">Search</div>
+                            </div>        
+                        </div>
                     </form>
-                </div>
+                </div>   
             </div>
         </div>
     </div>
