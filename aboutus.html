@@ -22,7 +22,6 @@
     <header class="jumbotron jumbotron-fluid">
         <div class="container">
             <div class="row">
-                <div class="row">
                     <div class="col-4 col-sm-3 col-md-2 align-self-center">
                     <a href="index.html"><img src="img/logo.png" class="img-fluid" /></a>
                 </div>
@@ -37,6 +36,7 @@
     <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
         <div class="container">
             <a class="navbar-brand" href="index.html"><img src="img/logo.png" height="30" width="30" /></a>
+<!--Below is the button ml-auto correct?-->
             <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#nucampNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -63,9 +63,9 @@
                <hr />
             </div>
         </div>
-
-        <div class="row row-content align-item-center">
-            <div class="col-sm-4 col-md-6">
+<!--Below are the align-item-center on 67, and col-sm-4 on 68 correct? SHOULD 67 row row-content & 68 col-sm-6?-->
+        <div class="row row-content">
+            <div class="col-md-6">
                 <h3>Our Mission</h3>
                 <p>We present a curated database of the best campsites in the vast woods and backcountry of the World Wide Web Wilderness. We increase access to adventure for the public while promoting safe and respectful use of resources. The expert wilderness trekkers on our staff personally verify each campsite to make sure that they are up to our standards. We also present a platform for campers to share reviews on campsites they have visited with each other.</p>
             </div>
@@ -76,7 +76,7 @@
                         <dl class="row">
                             <dt class="col-6">Founded</dt>
                             <dd class="col-6">February 3, 2016</dd>
-                            <dd class="col-6">No. of Campsites in 2019</dd>
+                            <dd class="col-6">No. of Campsites in 2019</dt>
                             <dd class="col-6">563</dd>
                             <dt class="col-6">No. of Reviews in 2019</dt>
                             <dd class="col-6">4388</dd>
@@ -102,17 +102,36 @@
             </div>  
         </div>
         
-        <div class="row row-content align-item-center">
-            <div class="col-12">
+        <div class="row row-content">
+            <div class="col">
                 <h3>Community Partners</h3>
-                <h4>Bootstrap Outfitters <small>Outdoor Gear Specialists</small></h4>
-                <p class="d-none d-sm-block">Bootstrap Outfitters supplies you with the gear you need at prices you can't beat.</p>
-                <h4>Git Out Expeditions <small>Group Adventure Expeditions</small></h4>
-                <p class="d-none d-sm-block">Join Git Out Expeditions to explore new horizons with a group of other adventurers!</p>
-                <h4>Mongo Fly Shop <small>Your Neighborhood Fly Fishing Shop</small></h4>
-                <p class="d-none d-sm-block" >Need a new fishing pole, a tacklebox, or flies of all kinds? Stop by Mongo Fly Shop.</p>
-                <h4>Node Outdoor Apparel <small>Outdoor Clothes & Shoes</small></h4>
-                <p class="d-none d-sm-block">From polar fleeces to swimsuits, hiking boots to waders, a visit to Node will be sure to get you covered.</p>
+                <ul class="nav nav-tabs">
+                    <!--the one with the active tab will be the default tab that's open when you open browser-->
+                    <li class="nav-item"><a class="nav-link active" href="#bootstrap" role="tab" data-toggle="tab">Bootstrap Outfitters</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#git" role="tab" data-toggle="tab">Git Outfitters</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#mongo" role="tab" data-toggle="tab">Mongo Fly Shop</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#node" role="tab" data-toggle="tab">Node Outdoor Apparel</a></li>
+                </ul>
+                <!--Now the actual content that will be in the tabs. Community partners & discription-->
+                <!--fade gives the fade effect when you click each tab-->
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane fade show active" id="bootstrap">
+                        <h4>Bootstrap Outfitters <small>Outdoor Gear Specialists</small></h4>
+                        <p class="d-none d-sm-block">Bootstrap Outfitters supplies you with the gear you need at prices you can't beat.</p>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="git">
+                        <h4>Git Out Expeditions <small>Group Adventure Expeditions</small></h4>
+                        <p class="d-none d-sm-block">Join Git Out Expeditions to explore new horizons with a group of other adventurers!</p>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="mongo">
+                        <h4>Mongo Fly Shop <small>Your Neighborhood Fly Fishing Shop</small></h4>
+                        <p class="d-none d-sm-block">Need a new fishing pole, a tacklebox, or flies of all kinds? Stop by Mongo Fly Shop.</p>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="node">
+                        <h4>Node Outdoor Apparel <small>Outdoor Clothes & Shoes</small></h4>
+                        <p class="d-none d-sm-block">From polar fleeces to swimsuits, hiking boots to waders, a visit to Node will be sure to get you covered.</p>
+                    </div>
+                </div>
             </div>
         </div>
 
