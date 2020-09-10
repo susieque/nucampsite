@@ -33,15 +33,15 @@
                             <h2>a better way to camp</h2>
                         </div>
                             <!--Close to col and row divs after the closing h2 tag -->
-                    <div class="col-md-4 col-xl-2">
-                        <a href="#reserveForm"><button class="btn bg-info text-white btn-lg mt-4">Reserve Campsite</button></a>
+                    <div class="col-md-4 col-xl-2 mt-4">
+                        <a href="#reserveForm" role="button" class="btn btn-lg bg-info" data-toggle="tooltip" title="Or call us at 1-206-555-1234">Reserve Campsite</button></a>
+                        <!-- Only 2 attributes to add to create a tooltip: data-toggle="tooltip & title attribute title="Or call us at the phone number" will pop up. -->
                     </div>
                 </div>   
             </div>
         </div>
     </header>
 
-    <!--sticky-top keeps navbar in place-->
     <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
         <!--Below make a responsive navbar. Added just below nav tag. Also add a new div with 2 classes- collapse navbar-collapse above ul and id that matches data target above. -->
         <div class="container">
@@ -62,9 +62,54 @@
                     <li class="nav-item"><a class="nav-link" href="contactus.html"><i
                                 class="fa fa-address-card fa-lg"></i>Contact</a></li>
                 </ul>
+                <span class="navbar-text ml-auto">
+                    <a role="button" data-toggle="modal" data-target="#loginModal">
+                        <i class="fa fa-sign-in"></i>Login
+                    </a>
+                </span>
             </div>
         </div>
     </nav>
+
+    <div id="loginModal" class="modal fade" role="dialog">
+        <div class="modal-dialog" role="document">
+           <div class="modal-content">
+              <div class="modal-header">
+                    <h3 class="modal-title">Login</h3>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <form>
+                            <div class="form-row">
+                               <div class="form-group col-12">
+                                   <label class="sr-only" for="loginEmail">Email Address</label>
+                                   <input type="email" class="form-control form-control-sm" id="loginEmail" placeholder="Enter email">
+                               </div> 
+                               <div class="form-group col-12">
+                                   <label class="sr-only" for="loginPassword">Password</label>
+                                   <input type="password" class="form-control form-control-sm" id="loginPassword" placeholder="Password">
+                               </div>
+                               <div class="col">
+                                   <div class="form-check">
+                                       <input calss="form-check-input" type="checkbox">
+                                       <label class="form-check-label">Rememeber Me</label>
+                                   </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiaa="modal">Cancel</button>
+                                <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+              </div> 
+           </div> 
+        </div>
+
+    </div>
+
     <div class="container">
         <div class="row row-content align-items-center">
             <div class="col-sm-4 order-sm-last col-md-3">
@@ -185,6 +230,13 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <script>
+        $(function () {
+            $('[data-toggle+"tooltip"]').tooltip()
+        })
+    </script>
+
 
 </body>
 
