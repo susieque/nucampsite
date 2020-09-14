@@ -191,6 +191,13 @@
                         <span class="carousel-control-next-icon"></span>
                         <span class="sr-only">Next</span>
                     </a>
+                    <!--Comment out so there's only 1 button for PAUSE & play  <div class="btn-group" id="carouselButton"></div> -->
+                    <button class="btn btn-danger btn-sm" id="carouselButton">
+                        <i class="fa fa-pause"></i>
+                    </button>
+                    <!-- <button class="btn btn-danger btn-sm" id="carouselPlay">
+                        <i class="fa fa-play"></i>
+                    </button> In CSS styles add the postioning styles using carousel button id -->
                 </div>
             </div>
         </div>
@@ -266,11 +273,37 @@
             </div>
         </div>
     </footer>
+
     <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
+    <!--jQuery link scripts. $ is the indication to start of jQuery-->
+    <!--The function line method is called a READY METHOD in jQuery-->
+    <script>
+        $(function() {
+            $(".carousel").carousel( { interval: 2000 } );  
+            $("#carouselButton").click(function(){
+                if ($("#carouselButton").children("i").hasClass("fa-pause")) {
+                    $(".carousel").carousel("pause");
+                    $("#carouselButton").children("i").removeClass("fa-pause");
+                    $("#carouselButton").children("i").addClass("fa-play");
+                } else {
+                    $(".carousel").carousel("cycle");
+                    $("#carouselButton").children("i").removeClass("fa-play");
+                    $("#carouselButton").children("i").addClass("fa-pause");
+                }
+
+            });
+
+        });
+    </script>
+
+<!-- Carousel is set for 2 seconds, default is 5000 -->
+<!--jQuery method called CLICK. When carousel is clicked it will pause. Then clicked again it will restart the carousel -->
+<!--CLICK method is from jQuery itself. api.jquery.com PAUSE & CYCLE arguements come from bootstrap documentation-->
 </body>
 
 </html>
+
