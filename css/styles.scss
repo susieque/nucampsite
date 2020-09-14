@@ -27,7 +27,10 @@ h2 {
 header {
     h2 {
         color: $color-pale;
-    }    
+    }   
+    // p {
+        //can nest here. Example: target paragraphs elements inside header, can add another rule here. Otherwise start a new header p
+    // {
 }
 
 .site-footer {

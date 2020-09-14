@@ -281,22 +281,7 @@
 
     <!--jQuery link scripts. $ is the indication to start of jQuery-->
     <!--The function line method is called a READY METHOD in jQuery-->
-    <script>
-        $(function() {
-            $(".carousel").carousel( { interval: 2000 } );  
-            $("#carouselButton").click(function(){
-                if ($("#carouselButton").children("i").hasClass("fa-pause")) {
-                    $(".carousel").carousel("pause");
-                    $("#carouselButton").children("i").removeClass("fa-pause");
-                    $("#carouselButton").children("i").addClass("fa-play");
-                } else {
-                    $(".carousel").carousel("cycle");
-                    $("#carouselButton").children("i").removeClass("fa-play");
-                    $("#carouselButton").children("i").addClass("fa-pause");
-                }
-            });
-        });
-    </script>
+    <script src="js/scripts.js"></script>
 
 <!--carousel interval is 2 seconds, default is 5000 for 5 seconds-->
 <!--jQuery method called CLICK. When carousel is clicked it will pause. Then clicked again it will restart the carousel -->
