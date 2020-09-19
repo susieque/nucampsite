@@ -35,7 +35,7 @@ header h2 {
   padding: 10px; }
 
 .carousel-caption {
-  background-color: #rgba 0, 0, 0, 0.5; }
+  background-color: rgba(0, 0, 0, 0.5); }
 
 .carousel {
   border: solid #5637dd; }
@@ -51,3 +51,11 @@ header h2 {
   right: 0;
   bottom: 0;
   z-index: 100; }
+
+#reserveModal .modal-header {
+  background-color: #17A2B8;
+  color: white; }
+
+#loginModal .modal-header {
+  background-color: #901CAD;
+  color: white; }

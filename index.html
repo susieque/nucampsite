@@ -6,14 +6,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Bootstrap CSS -->
+    <!-- build:css css/main.css -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
-
-    <!-- Additional CSS must be placed after Bootstrap CSS -->
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
     <link rel="stylesheet" href="css/styles.css" />
+    <!-- endbuild -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
 
     <title>NuCamp: A Better Way To Camp</title>
 </head>
@@ -29,8 +28,8 @@
                     <h1>NuCamp</h1>
                     <h2>a better way to camp</h2>
                 </div>
-                <div class="col-md-4 col-xl-2 mt-4">
-                    <a role="button" class="btn btn-link btn-lg bg-info text-light text-nowrap" data-toggle="modal" data-target="#reserveModal">Reserve Campsite</a>
+                <div class="col-md-4 col-xl-2">
+                    <a class="btn bg-info text-white btn-lg mt-4" id="reserveButton">Reserve Campsite</a>
                 </div>
             </div>
         </div>
@@ -39,10 +38,10 @@
     <div id="reserveModal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
-                <div class="modal-header bg-info">
-                    <h3 class="modal-title text-light">Reserve a Campsite</h3>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
+                <div class="modal-header">
+                        <h3 class="modal-title">Reserve a Campsite</h3>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>    
                 <div class="modal-body">
                     <div class="container-fluid">
                         <form>
@@ -107,8 +106,7 @@
                     <li class="nav-item"><a class="nav-link" href="contactus.html"><i class="fa fa-address-card fa-lg"></i> Contact</a></li>
                 </ul>
                 <span class="navbar-text ml-auto">
-                    <a role="button" data-toggle="modal" data-target="#loginModal">
-                        <i class="fa fa-sign-in" ></i> Login</a>
+                    <a role="button" id="loginButton"><i class="fa fa-sign-in">Login</i></a>
                 </span>
             </div>
         </div>
@@ -275,17 +273,13 @@
     </footer>
 
     <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
+    <!-- build:js js/main.js -->
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-
-    <!--jQuery link scripts. $ is the indication to start of jQuery-->
-    <!--The function line method is called a READY METHOD in jQuery-->
     <script src="js/scripts.js"></script>
+    <!-- endbuild -->
 
-<!--carousel interval is 2 seconds, default is 5000 for 5 seconds-->
-<!--jQuery method called CLICK. When carousel is clicked it will pause. Then clicked again it will restart the carousel -->
-<!--CLICK method is from jQuery itself. api.jquery.com PAUSE & CYCLE arguements come from bootstrap documentation-->
 </body>
 
 </html>
